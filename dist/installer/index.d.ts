@@ -10,3 +10,4 @@ export declare class TextCommandsInstaller extends Installer {
     constructor(mappedTypes?: TypePair[]);
     install(container: Container): Promise<void>;
 }
+//# sourceMappingURL=index.d.ts.map

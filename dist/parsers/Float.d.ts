@@ -6,3 +6,4 @@ export declare class FloatParser extends TextArgParser {
     description: string;
     parse(arg: TextArgInstaller, context: TextCommandContext): Promise<number>;
 }
+//# sourceMappingURL=Float.d.ts.map

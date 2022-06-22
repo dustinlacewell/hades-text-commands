@@ -58,3 +58,4 @@ export declare function setTextParserMetas(metas: Collection<string, TextArgPars
  * @param target Target parser class.
  */
 export declare function registerTextParser(target: Newable<TextArgParser>): void;
+//# sourceMappingURL=api.d.ts.map

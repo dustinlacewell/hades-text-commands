@@ -3,3 +3,4 @@
  * @param name The command's name.
  */
 export declare function command(name: string): (target: any) => any;
+//# sourceMappingURL=command.d.ts.map

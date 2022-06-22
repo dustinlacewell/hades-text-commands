@@ -7,3 +7,4 @@ export interface ParserDecorator extends ClassDecorator, PropertyDecorator {
  * @param parserClass The Parser to use.
  */
 export declare function parser(parserClass?: Newable<TextArgParser>): ParserDecorator;
+//# sourceMappingURL=parser.d.ts.map

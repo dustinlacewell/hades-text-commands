@@ -6,3 +6,4 @@ export declare class StringParser extends TextArgParser {
     description: string;
     parse(arg: TextArgInstaller, context: TextCommandContext): Promise<string>;
 }
+//# sourceMappingURL=String.d.ts.map

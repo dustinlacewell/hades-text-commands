@@ -8,3 +8,4 @@ export declare class TextArgError extends Error {
     showHelp: boolean;
     constructor(msg: string, showHelp?: boolean);
 }
+//# sourceMappingURL=TextArgError.d.ts.map

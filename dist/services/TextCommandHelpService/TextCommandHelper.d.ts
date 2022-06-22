@@ -1,4 +1,4 @@
-import { MessageEmbed } from 'discord.js';
+import { Collection, MessageEmbed } from 'discord.js';
 import { TextArgMeta, TextCommandMeta } from '../../metadata';
 /**
  * Extracts help information from a command meta.
@@ -7,7 +7,7 @@ export declare class TextCommandHelper {
     private meta;
     constructor(meta: TextCommandMeta);
     get name(): string;
-    get args(): import("@discordjs/collection").Collection<string, TextArgMeta>;
+    get args(): Collection<string, TextArgMeta>;
     get target(): import("hades").Constructor;
     get description(): string;
     getArgTags(): string[];
@@ -19,3 +19,4 @@ export declare class TextCommandHelper {
     }[];
     getHelpEmbed(): MessageEmbed;
 }
+//# sourceMappingURL=TextCommandHelper.d.ts.map

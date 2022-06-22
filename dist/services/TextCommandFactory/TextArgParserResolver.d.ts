@@ -15,3 +15,4 @@ export declare class TextArgParserResolver {
      */
     infer(fromType: Constructor): Newable<TextArgParser>;
 }
+//# sourceMappingURL=TextArgParserResolver.d.ts.map

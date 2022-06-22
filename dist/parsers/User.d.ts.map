@@ -1,0 +1,1 @@
+{"version":3,"file":"User.d.ts","sourceRoot":"","sources":["../../src/parsers/User.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,gBAAgB,EAAE,MAAM,iDAAiD,CAAC;AACnF,OAAO,EAAE,kBAAkB,EAAE,MAAM,8BAA8B,CAAC;AAElE,OAAO,EAAE,aAAa,EAAE,MAAM,iBAAiB,CAAC;AAGhD,qBACa,UAAW,SAAQ,aAAa;IACzC,IAAI,SAAU;IACd,WAAW,SAAqB;IAE1B,KAAK,CAAC,GAAG,EAAE,gBAAgB,EAAE,OAAO,EAAE,kBAAkB;CAMjE"}

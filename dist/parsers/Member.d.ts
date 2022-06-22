@@ -6,3 +6,4 @@ export declare class MemberParser extends TextArgParser {
     description: string;
     parse(arg: TextArgInstaller, context: TextCommandContext): Promise<import("discord.js").GuildMember>;
 }
+//# sourceMappingURL=Member.d.ts.map

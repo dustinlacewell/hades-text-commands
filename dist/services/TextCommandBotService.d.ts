@@ -10,3 +10,4 @@ export declare class TextCommandBotService extends HadesBotService {
     helpService: TextCommandHelpService;
     onMessage<T extends Message>(message: T): Promise<void>;
 }
+//# sourceMappingURL=TextCommandBotService.d.ts.map

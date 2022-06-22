@@ -1,4 +1,4 @@
-import { AwaitReactionsOptions, CollectorFilter, MessageEditOptions, ReactionCollectorOptions, MessageEmbed, Message, EmojiIdentifierResolvable, MessageReaction, User, ReplyMessageOptions } from "discord.js";
+import { AwaitReactionsOptions, CollectorFilter, MessageEditOptions, ReactionCollectorOptions, MessageEmbed, Message, EmojiIdentifierResolvable, MessageReaction, User, ReplyMessageOptions, Collection, MessageAttachment } from "discord.js";
 import { DiscordService } from "hades";
 import { TextCommandContext } from "./TextCommandContext";
 /**
@@ -14,7 +14,7 @@ export declare abstract class TextCommand {
     get activity(): import("discord.js").MessageActivity;
     get application(): string;
     get args(): string[];
-    get attachments(): import("@discordjs/collection").Collection<string, import("discord.js").MessageAttachment>;
+    get attachments(): Collection<string, MessageAttachment>;
     get body(): string;
     get channel(): import("discord.js").DMChannel | import("discord.js").PartialDMChannel | import("discord.js").NewsChannel | import("discord.js").TextChannel | import("discord.js").ThreadChannel | import("discord.js").VoiceChannel;
     get command(): string;
@@ -43,15 +43,15 @@ export declare abstract class TextCommand {
     get url(): string;
     get user(): User;
     get webhookID(): string;
-    get members(): import("@discordjs/collection").Collection<string, import("discord.js").GuildMember>;
-    get categories(): import("@discordjs/collection").Collection<string, import("discord.js").CategoryChannel>;
-    get channels(): import("@discordjs/collection").Collection<string, import("discord.js").TextChannel>;
-    get roles(): import("@discordjs/collection").Collection<string, import("discord.js").Role>;
+    get members(): Collection<string, import("discord.js").GuildMember>;
+    get categories(): Collection<string, import("discord.js").CategoryChannel>;
+    get channels(): Collection<string, import("discord.js").TextChannel>;
+    get roles(): Collection<string, import("discord.js").Role>;
     getMember(memberId: string): import("discord.js").GuildMember;
     getOwner(): string;
     getChannel(channelId: string): import("discord.js").GuildBasedChannel;
     getRole(roleName: string): import("discord.js").Role;
-    awaitReactions(filter: CollectorFilter<[MessageReaction, User]>, options?: AwaitReactionsOptions): Promise<import("@discordjs/collection").Collection<string, MessageReaction>>;
+    awaitReactions(filter: CollectorFilter<[MessageReaction, User]>, options?: AwaitReactionsOptions): Promise<Collection<string, MessageReaction>>;
     createReactionCollector(filter: CollectorFilter<[MessageReaction, User]>, options?: ReactionCollectorOptions): import("discord.js").ReactionCollector;
     delete(): Promise<Message<boolean>>;
     edit(content: string, options: MessageEditOptions | MessageEmbed): Promise<Message<boolean>>;
@@ -65,3 +65,4 @@ export declare abstract class TextCommand {
     suppressEmbeds(suppress?: boolean): Promise<Message<boolean>>;
     unpin(reason?: string): Promise<Message<boolean>>;
 }
+//# sourceMappingURL=TextCommand.d.ts.map

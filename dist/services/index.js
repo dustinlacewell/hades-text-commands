@@ -16,5 +16,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./TextCommandBotService"), exports);
 __exportStar(require("./TextCommandFactory"), exports);
+__exportStar(require("./TextCommandHelpService"), exports);
 __exportStar(require("./TextCommandService"), exports);
 //# sourceMappingURL=index.js.map

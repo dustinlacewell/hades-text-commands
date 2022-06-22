@@ -48,3 +48,4 @@ export declare class TextCommandFactory {
      */
     create(context: TextCommandContext): Promise<any>;
 }
+//# sourceMappingURL=TextCommandFactory.d.ts.map

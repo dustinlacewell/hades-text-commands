@@ -6,3 +6,4 @@ export declare class RoleParser extends TextArgParser {
     description: string;
     parse(arg: TextArgInstaller, context: TextCommandContext): Promise<import("discord.js").Role>;
 }
+//# sourceMappingURL=Role.d.ts.map

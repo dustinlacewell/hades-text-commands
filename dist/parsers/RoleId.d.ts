@@ -6,3 +6,4 @@ export declare class RoleIdParser extends TextArgParser {
     description: string;
     parse(arg: TextArgInstaller, context: TextCommandContext): Promise<string>;
 }
+//# sourceMappingURL=RoleId.d.ts.map

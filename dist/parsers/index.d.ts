@@ -10,3 +10,4 @@ export * from './String';
 export * from './TextArgParser';
 export * from './User';
 export * from './UserId';
+//# sourceMappingURL=index.d.ts.map

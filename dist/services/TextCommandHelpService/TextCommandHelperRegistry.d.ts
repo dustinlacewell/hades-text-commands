@@ -10,3 +10,4 @@ export declare class TextCommandHelperRegistry {
     helperFor(name: string): TextCommandHelper;
     find(predicate: (helper: TextCommandHelper) => boolean): TextCommandHelper;
 }
+//# sourceMappingURL=TextCommandHelperRegistry.d.ts.map

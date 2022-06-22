@@ -6,3 +6,4 @@ export declare class ChannelParser extends TextArgParser {
     description: string;
     parse(arg: TextArgInstaller, context: TextCommandContext): Promise<import("discord.js").AnyChannel>;
 }
+//# sourceMappingURL=Channel.d.ts.map

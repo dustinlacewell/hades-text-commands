@@ -20,3 +20,4 @@ export declare class TextCommandService {
     execute(ctx: TextCommandContext): Promise<void>;
     dispatch(msg: Message): void;
 }
+//# sourceMappingURL=TextCommandService.d.ts.map

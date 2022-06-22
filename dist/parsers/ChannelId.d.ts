@@ -6,3 +6,4 @@ export declare class ChannelIdParser extends TextArgParser {
     description: string;
     parse(arg: TextArgInstaller, context: TextCommandContext): Promise<string>;
 }
+//# sourceMappingURL=ChannelId.d.ts.map

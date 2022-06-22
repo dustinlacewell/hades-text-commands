@@ -7,3 +7,4 @@ export declare class HelpCommand extends TextCommand {
     validateCommandName(): void;
     execute(): Promise<import("discord.js").Message<boolean>>;
 }
+//# sourceMappingURL=HelpCommand.d.ts.map

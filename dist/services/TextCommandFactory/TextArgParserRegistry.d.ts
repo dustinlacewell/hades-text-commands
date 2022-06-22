@@ -13,3 +13,4 @@ export declare class TextArgParserRegistry {
     parserFor(parserType: Newable<TextArgParser>): TextArgParser;
     find(predicate: (meta: TextArgParser) => boolean): TextArgParser;
 }
+//# sourceMappingURL=TextArgParserRegistry.d.ts.map

@@ -7,3 +7,4 @@ export declare class UppercaseStringParser extends TextArgParser {
     description: string;
     parse(arg: TextArgInstaller, context: TextCommandContext): Promise<string>;
 }
+//# sourceMappingURL=UppercaseString.d.ts.map

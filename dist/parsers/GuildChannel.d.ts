@@ -6,3 +6,4 @@ export declare class GuildChannelParser extends TextArgParser {
     description: string;
     parse(arg: TextArgInstaller, context: TextCommandContext): Promise<import("discord.js").GuildBasedChannel>;
 }
+//# sourceMappingURL=GuildChannel.d.ts.map

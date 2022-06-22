@@ -12,3 +12,4 @@ export declare class TextCommandContext {
     command: string;
     constructor(msg: Message, parsed: SuccessfulParsedMessage<Message>);
 }
+//# sourceMappingURL=TextCommandContext.d.ts.map

@@ -6,3 +6,4 @@ export declare class IntegerParser extends TextArgParser {
     description: string;
     parse(arg: TextArgInstaller, context: TextCommandContext): Promise<number>;
 }
+//# sourceMappingURL=Integer.d.ts.map

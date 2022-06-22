@@ -5,3 +5,4 @@ export declare class TextCommandHelpService {
     getHelpEmbed(command: string): MessageEmbed;
     getCommandsEmbed(): MessageEmbed;
 }
+//# sourceMappingURL=TextCommandHelpService.d.ts.map

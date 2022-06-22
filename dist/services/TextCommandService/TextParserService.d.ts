@@ -22,3 +22,4 @@ export declare class TextParserService {
      */
     parse(msg: Message): TextCommandContext | null;
 }
+//# sourceMappingURL=TextParserService.d.ts.map

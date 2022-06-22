@@ -4,3 +4,4 @@ import { Container } from "inversify";
  * @param container HadesContainer to use.
  */
 export declare const installParsers: (container: Container) => void;
+//# sourceMappingURL=installParsers.d.ts.map

@@ -6,3 +6,4 @@ export declare class UserParser extends TextArgParser {
     description: string;
     parse(arg: TextArgInstaller, context: TextCommandContext): Promise<import("discord.js").User>;
 }
+//# sourceMappingURL=User.d.ts.map

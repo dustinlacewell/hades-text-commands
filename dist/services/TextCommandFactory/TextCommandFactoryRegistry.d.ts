@@ -11,3 +11,4 @@ export declare class TextCommandFactoryRegistry {
     find(predicate: (factory: TextCommandFactory) => boolean): TextCommandFactory;
     all(): TextCommandFactory[];
 }
+//# sourceMappingURL=TextCommandFactoryRegistry.d.ts.map

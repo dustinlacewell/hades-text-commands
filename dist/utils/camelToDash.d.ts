@@ -3,3 +3,4 @@
  * @param myStr String to convert.
  */
 export declare function camelToDash(myStr: string): string;
+//# sourceMappingURL=camelToDash.d.ts.map

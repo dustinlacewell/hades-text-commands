@@ -4,3 +4,4 @@ import { Container } from "inversify";
  * @param container The HadesContainer to use.
  */
 export declare const installCommands: (container: Container) => void;
+//# sourceMappingURL=installCommands.d.ts.map

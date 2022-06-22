@@ -4,3 +4,4 @@ export declare class TextArgParserMeta {
     type: Newable<TextParser>;
     description?: string;
 }
+//# sourceMappingURL=TextArgParserMeta.d.ts.map

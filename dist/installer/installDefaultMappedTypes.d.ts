@@ -9,3 +9,4 @@ export declare const defaultMappedTypes: TypePair[];
  * @param mappedTypes Type mappings.
  */
 export declare const installDefaultMappedTypes: (container: Container, mappedTypes: TypePair[]) => void;
+//# sourceMappingURL=installDefaultMappedTypes.d.ts.map

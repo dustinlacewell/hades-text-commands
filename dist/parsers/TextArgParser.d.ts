@@ -5,3 +5,4 @@ export declare class TextArgParser {
     description: string;
     parse(arg: TextArgInstaller, context: TextCommandContext): Promise<any>;
 }
+//# sourceMappingURL=TextArgParser.d.ts.map

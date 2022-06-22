@@ -1,5 +1,5 @@
 import { inject, injectable } from "inversify";
-import { AwaitReactionsOptions, CollectorFilter, MessageEditOptions, ReactionCollectorOptions, MessageEmbed, MessageOptions, Message, EmojiIdentifierResolvable, MessageReaction, User, ReplyMessageOptions } from "discord.js";
+import { AwaitReactionsOptions, CollectorFilter, MessageEditOptions, ReactionCollectorOptions, MessageEmbed, Message, EmojiIdentifierResolvable, MessageReaction, User, ReplyMessageOptions, Collection, MessageAttachment } from "discord.js";
 
 
 import { DiscordService } from "hades";
@@ -25,7 +25,7 @@ export abstract class TextCommand {
     get activity() { return this.msg.activity; }
     get application() { return this.msg.applicationId; }
     get args() { return this.context.args; }
-    get attachments() { return this.msg.attachments; }
+    get attachments(): Collection<string, MessageAttachment> { return this.msg.attachments; }
     get body() { return this.context.body; }
     get channel() { return this.msg.channel; }
     get command() { return this.context.command; }

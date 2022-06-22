@@ -4,3 +4,4 @@ export declare class CommandsCommand extends TextCommand {
     commandService: TextCommandHelpService;
     execute(): Promise<import("discord.js").Message<boolean>>;
 }
+//# sourceMappingURL=CommandsCommand.d.ts.map

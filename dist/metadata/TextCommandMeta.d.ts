@@ -12,3 +12,4 @@ export declare class TextCommandMeta {
     getArgMeta(name: string): TextArgMeta;
     addValidatorMethod(argName: string, methodName: string): Set<string>;
 }
+//# sourceMappingURL=TextCommandMeta.d.ts.map

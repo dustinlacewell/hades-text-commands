@@ -22,3 +22,4 @@ export declare type ArgInfo = {
  * @param info Options for the decorator.
  */
 export declare function arg(info?: ArgInfo): (target: Constructable, key: string) => void;
+//# sourceMappingURL=arg.d.ts.map

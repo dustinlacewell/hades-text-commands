@@ -5,3 +5,4 @@ export interface DescriptionDecorator extends ClassDecorator, PropertyDecorator 
  * @param msg The description.
  */
 export declare function description(msg: string): DescriptionDecorator;
+//# sourceMappingURL=description.d.ts.map

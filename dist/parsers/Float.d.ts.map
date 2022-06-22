@@ -1,0 +1,1 @@
+{"version":3,"file":"Float.d.ts","sourceRoot":"","sources":["../../src/parsers/Float.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,gBAAgB,EAAE,MAAM,iDAAiD,CAAC;AACnF,OAAO,EAAE,kBAAkB,EAAE,MAAM,8BAA8B,CAAC;AAElE,OAAO,EAAE,aAAa,EAAE,MAAM,iBAAiB,CAAC;AAGhD,qBACa,WAAY,SAAQ,aAAa;IAC1C,IAAI,SAAW;IACf,WAAW,SAA0C;IAE/C,KAAK,CAAC,GAAG,EAAE,gBAAgB,EAAE,OAAO,EAAE,kBAAkB;CAGjE"}

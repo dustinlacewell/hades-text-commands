@@ -4,3 +4,4 @@ import { Constructable } from "hades";
  * @param name Name of argument to validate.
  */
 export declare function validate(name: string): ({ constructor }: Constructable, key: string, _: PropertyDescriptor) => void;
+//# sourceMappingURL=validate.d.ts.map

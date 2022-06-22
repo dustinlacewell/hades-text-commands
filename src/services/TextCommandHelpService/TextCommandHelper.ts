@@ -1,4 +1,4 @@
-import { MessageEmbed } from 'discord.js';
+import { Collection, MessageEmbed } from 'discord.js';
 import { TextArgMeta, TextCommandMeta } from '../../metadata';
 
 
@@ -9,7 +9,7 @@ export class TextCommandHelper {
     constructor(private meta: TextCommandMeta) { }
 
     get name() { return this.meta.name.trim(); }
-    get args() { return this.meta.args; }
+    get args(): Collection<string, TextArgMeta> { return this.meta.args; }
     get target() { return this.meta.target; }
     get description() { return this.meta.description?.trim(); }
 

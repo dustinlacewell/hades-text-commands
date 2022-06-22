@@ -12,3 +12,4 @@ export declare class TextArgMeta {
     validatorMethods: Set<string>;
     validatorInstallers: InstallerFunc[];
 }
+//# sourceMappingURL=TextArgMeta.d.ts.map
