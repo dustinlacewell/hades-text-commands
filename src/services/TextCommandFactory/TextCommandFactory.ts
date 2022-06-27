@@ -21,11 +21,6 @@ export class TextCommandFactory {
     parentContainer: Container;
     /** the meta of the associated command */
     meta: TextCommandMeta;
-
-    /** service for looking up parsers based on argument type */
-    inferenceService: TextArgParserResolver;
-    /** service for easy lookup of parsers */
-    parserService: TextArgParserRegistry;
     /** arguments of the associated command */
     argInstallers = new Collection<string, TextArgInstaller>();
 
@@ -35,17 +30,7 @@ export class TextCommandFactory {
     ) {
         this.parentContainer = parentContainer;
         this.meta = meta;
-
-        this.inferenceService = parentContainer.get(TextArgParserResolver);
-        this.parserService = parentContainer.get(TextArgParserRegistry);
-
-        // setup arguments
-        for (let [argName, argMeta] of meta.args) {
-            const parserType = argMeta.parserType || this.inferenceService.infer(argMeta.type);
-            const parser = this.parserService.parserFor(parserType);
-            const arg = new TextArgInstaller(argMeta, parser);
-            this.argInstallers.set(argName, arg);
-        }
+        console.log("Constructed text command factory for", meta.name);
     }
 
     /**
@@ -96,6 +81,17 @@ export class TextCommandFactory {
      * @returns A command instance.
      */
     async create(context: TextCommandContext) {
+        const inferenceService = this.parentContainer.get(TextArgParserResolver);
+        const parserService = this.parentContainer.get(TextArgParserRegistry);
+
+        // setup arguments
+        for (let [argName, argMeta] of this.meta.args) {
+            const parserType = argMeta.parserType || inferenceService.infer(argMeta.type);
+            const parser = parserService.parserFor(parserType);
+            const arg = new TextArgInstaller(argMeta, parser);
+            this.argInstallers.set(argName, arg);
+        }
+
         // subcontainer config
         const subContainer = this.createSubContainer(context);
 

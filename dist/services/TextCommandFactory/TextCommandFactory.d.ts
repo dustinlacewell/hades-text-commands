@@ -3,8 +3,6 @@ import { Container } from 'inversify';
 import { TextCommandMeta } from '../../metadata/TextCommandMeta';
 import { TextArgInstaller } from './TextArgInstaller';
 import { TextCommandContext } from '../../models/TextCommandContext';
-import { TextArgParserResolver } from './TextArgParserResolver';
-import { TextArgParserRegistry } from './TextArgParserRegistry';
 /**
  * Instantiates commands on invocation.
  *
@@ -17,10 +15,6 @@ export declare class TextCommandFactory {
     parentContainer: Container;
     /** the meta of the associated command */
     meta: TextCommandMeta;
-    /** service for looking up parsers based on argument type */
-    inferenceService: TextArgParserResolver;
-    /** service for easy lookup of parsers */
-    parserService: TextArgParserRegistry;
     /** arguments of the associated command */
     argInstallers: Collection<string, TextArgInstaller>;
     constructor(parentContainer: Container, meta: TextCommandMeta);

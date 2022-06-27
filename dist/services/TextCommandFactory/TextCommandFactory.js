@@ -27,15 +27,7 @@ class TextCommandFactory {
         this.argInstallers = new discord_js_1.Collection();
         this.parentContainer = parentContainer;
         this.meta = meta;
-        this.inferenceService = parentContainer.get(TextArgParserResolver_1.TextArgParserResolver);
-        this.parserService = parentContainer.get(TextArgParserRegistry_1.TextArgParserRegistry);
-        // setup arguments
-        for (let [argName, argMeta] of meta.args) {
-            const parserType = argMeta.parserType || this.inferenceService.infer(argMeta.type);
-            const parser = this.parserService.parserFor(parserType);
-            const arg = new TextArgInstaller_1.TextArgInstaller(argMeta, parser);
-            this.argInstallers.set(argName, arg);
-        }
+        console.log("Constructed text command factory for", meta.name);
     }
     /**
      * Parse and install argument values into a container.
@@ -87,6 +79,15 @@ class TextCommandFactory {
      */
     create(context) {
         return __awaiter(this, void 0, void 0, function* () {
+            const inferenceService = this.parentContainer.get(TextArgParserResolver_1.TextArgParserResolver);
+            const parserService = this.parentContainer.get(TextArgParserRegistry_1.TextArgParserRegistry);
+            // setup arguments
+            for (let [argName, argMeta] of this.meta.args) {
+                const parserType = argMeta.parserType || inferenceService.infer(argMeta.type);
+                const parser = parserService.parserFor(parserType);
+                const arg = new TextArgInstaller_1.TextArgInstaller(argMeta, parser);
+                this.argInstallers.set(argName, arg);
+            }
             // subcontainer config
             const subContainer = this.createSubContainer(context);
             // parse, validate and bind argument values
