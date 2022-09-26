@@ -1,2 +1,12 @@
-node_modules
-.log
+*.log
+*.tern-port
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+.npm
+.eslintcache
+.direnv
+dist
+result

@@ -1,31 +1,36 @@
 {
+  "description": "Text-command extension for Hades",
   "name": "hades-text-commands",
   "version": "0.0.1",
-  "description": "Text-command extension for Hades",
-  "author": "",
-  "license": "ISC",
+  "author": "Dustin Lacewell",
+  "license": "MIT",
   "homepage": "https://github.com/dustinlacewell/hades-text-commands#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apoptosis/hades-text-commands.git"
+    "url": "git+https://github.com/dustinlacewell/hades-text-commands.git"
   },
   "bugs": {
     "url": "https://github.com/dustinlacewell/hades-text-commands/issues"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "./dist"
   ],
+  "engineStrict": true,
+  "engines": {
+    "npm": ">=4.0.0"
+  },
   "scripts": {
-    "build": "rm -fr ./dist; tsc -p tsconfig.json",
-    "watch": "tsc -p tsconfig.json -w"
+    "prepare": "npm run build",
+    "build": "tsc",
+    "watch": "tsc -w"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0",
-    "ts-node": "^10.8.1",
-    "tsconfig-paths": "^4.0.0",
-    "typescript": "^4.7.4"
+    "@types/node": "^18.7.23",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.0",
+    "typescript": "^4.8.3"
   },
   "peerDependencies": {
     "@discordjs/rest": "^0.5.0",

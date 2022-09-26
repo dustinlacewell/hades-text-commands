@@ -1,1 +1,0 @@
-{"version":3,"file":"TextCommandHelpService.d.ts","sourceRoot":"","sources":["../../../src/services/TextCommandHelpService/TextCommandHelpService.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,YAAY,CAAC;AAI1C,OAAO,EAAE,yBAAyB,EAAE,MAAM,6BAA6B,CAAC;AAGxE,qBACa,sBAAsB;IAG/B,OAAO,EAAE,yBAAyB,CAAA;IAElC,YAAY,CAAC,OAAO,EAAE,MAAM;IAQ5B,gBAAgB;CAmBnB"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"HelpCommand.d.ts","sourceRoot":"","sources":["../../src/builtins/HelpCommand.ts"],"names":[],"mappings":"AAGA,OAAO,EAAE,WAAW,EAAE,MAAM,uBAAuB,CAAC;AAGpD,OAAO,EAAE,sBAAsB,EAAE,MAAM,oCAAoC,CAAC;AAG5E,qBAIa,WAAY,SAAQ,WAAW;IAGxC,WAAW,EAAE,MAAM,CAAC;IAGpB,WAAW,EAAE,sBAAsB,CAAC;IAEpC,OAAO,CAAC,SAAS,CAAe;IAGhC,mBAAmB;IAQnB,OAAO;CAGV"}

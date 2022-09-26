@@ -1,1 +1,0 @@
-{"version":3,"file":"Integer.d.ts","sourceRoot":"","sources":["../../src/parsers/Integer.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,gBAAgB,EAAE,MAAM,iDAAiD,CAAC;AACnF,OAAO,EAAE,kBAAkB,EAAE,MAAM,8BAA8B,CAAC;AAElE,OAAO,EAAE,aAAa,EAAE,MAAM,iBAAiB,CAAC;AAGhD,qBACa,aAAc,SAAQ,aAAa;IAC5C,IAAI,SAAa;IACjB,WAAW,SAA+B;IAEpC,KAAK,CAAC,GAAG,EAAE,gBAAgB,EAAE,OAAO,EAAE,kBAAkB;CAGjE"}
