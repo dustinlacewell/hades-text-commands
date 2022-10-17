@@ -1,13 +1,13 @@
-import { Message } from 'discord.js';
-import { inject } from 'inversify';
+import { Message } from "discord.js";
+import { inject } from "inversify";
 
-import { TextCommandContext } from '../../models/TextCommandContext';
-import { TextArgError } from '../../errors/TextArgError';
+import { TextCommandContext } from "../../models/TextCommandContext";
+import { TextArgError } from "../../errors/TextArgError";
 
-import { singleton } from 'hades';
-import { TextParserService } from './TextParserService';
-import { TextCommandFactoryRegistry } from '../TextCommandFactory/TextCommandFactoryRegistry';
-import { TextCommandHelpService } from '../TextCommandHelpService/TextCommandHelpService';
+import { singleton } from "hades";
+import { TextParserService } from "./TextParserService";
+import { TextCommandFactoryRegistry } from "../TextCommandFactory/TextCommandFactoryRegistry";
+import { TextCommandHelpService } from "../TextCommandHelpService/TextCommandHelpService";
 
 /**
  * Orchestrates parsing and executing commands.
@@ -22,14 +22,14 @@ export class TextCommandService {
 
     /** service for parsing incoming messages */
     @inject(TextParserService)
-    parserService: TextParserService
+    parserService: TextParserService;
 
     /** factories for creating command instances */
     @inject(TextCommandFactoryRegistry)
-    factories: TextCommandFactoryRegistry
+    factories: TextCommandFactoryRegistry;
 
     @inject(TextCommandHelpService)
-    help: TextCommandHelpService
+    help: TextCommandHelpService;
 
     async execute(ctx: TextCommandContext) {
         const factory = this.factories.factoryFor(ctx.command);
@@ -43,7 +43,7 @@ export class TextCommandService {
                     if (e.showHelp) {
                         ctx.msg.reply({
                             content: e.message,
-                            embeds: [this.help.getHelpEmbed(ctx.command)]
+                            embeds: [this.help.getHelpEmbed(ctx.command)],
                         });
                     } else {
                         ctx.msg.reply(e.message);
@@ -57,9 +57,9 @@ export class TextCommandService {
     }
 
     dispatch(msg: Message) {
-        const parsedMessage = this.parserService.parse(msg)
+        const parsedMessage = this.parserService.parse(msg);
         if (parsedMessage) {
-            this.execute(parsedMessage)
+            this.execute(parsedMessage);
         }
     }
 }

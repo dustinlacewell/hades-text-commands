@@ -1,3 +1,3 @@
-export * from './TextCommandHelpService';
-export * from './TextCommandHelper';
-export * from './TextCommandHelperRegistry';
+export * from "./TextCommandHelpService";
+export * from "./TextCommandHelper";
+export * from "./TextCommandHelperRegistry";

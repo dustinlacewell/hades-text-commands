@@ -1,9 +1,7 @@
-import { getTextArgMeta, getTextCommandMeta } from '../metadata';
-import { Constructable, Constructor } from 'hades';
+import { getTextArgMeta, getTextCommandMeta } from "../metadata";
+import { Constructable, Constructor } from "hades";
 
-
-export interface DescriptionDecorator extends ClassDecorator, PropertyDecorator { }
-
+export interface DescriptionDecorator extends ClassDecorator, PropertyDecorator {}
 
 /**
  * Sets the description on a @command or @arg decorated target.

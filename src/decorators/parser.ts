@@ -1,11 +1,10 @@
-import { injectable } from 'inversify';
+import { injectable } from "inversify";
 
-import { getTextArgMeta, registerTextParser } from '../metadata';
-import { TextArgParser } from '../parsers/TextArgParser';
-import { Constructable, Constructor, Newable } from 'hades';
+import { getTextArgMeta, registerTextParser } from "../metadata";
+import { TextArgParser } from "../parsers/TextArgParser";
+import { Constructable, Constructor, Newable } from "hades";
 
-
-export interface ParserDecorator extends ClassDecorator, PropertyDecorator { }
+export interface ParserDecorator extends ClassDecorator, PropertyDecorator {}
 
 /**
  * Sets the Parser to use for an argument.
@@ -25,5 +24,5 @@ export function parser(parserClass?: Newable<TextArgParser>): ParserDecorator {
             registerTextParser(ctor as Newable<TextArgParser>);
             return injectable()(target);
         }
-    }
+    };
 }

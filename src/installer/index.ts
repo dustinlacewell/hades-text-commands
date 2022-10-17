@@ -10,15 +10,13 @@ export { defaultMappedTypes, TypePair } from "./installDefaultMappedTypes";
  * Installs text command support in HadesContainer.
  */
 export class TextCommandsInstaller extends Installer {
-  constructor(
-    private readonly mappedTypes: TypePair[] = defaultMappedTypes
-  ) {
-    super();
-  }
+    constructor(private readonly mappedTypes: TypePair[] = defaultMappedTypes) {
+        super();
+    }
 
-  async install(container: Container) {
-    installDefaultMappedTypes(container, this.mappedTypes);
-    installParsers(container);
-    installCommands(container);
-  }
+    async install(container: Container) {
+        installDefaultMappedTypes(container, this.mappedTypes);
+        installParsers(container);
+        installCommands(container);
+    }
 }

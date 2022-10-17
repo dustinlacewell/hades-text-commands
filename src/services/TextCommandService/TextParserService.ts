@@ -4,12 +4,11 @@ import { inject, optional } from "inversify";
 import { singleton } from "hades";
 import { TextCommandContext } from "../../models";
 
-
 export type TextParserServiceOptions = {
-    prefix?: string,
-    allowMention?: boolean,
-    parserOptions?: Partial<ParserOptions>,
-}
+    prefix?: string;
+    allowMention?: boolean;
+    parserOptions?: Partial<ParserOptions>;
+};
 
 export const defaults: TextParserServiceOptions = {
     prefix: "!",
@@ -17,12 +16,12 @@ export const defaults: TextParserServiceOptions = {
     parserOptions: {
         allowSpaceBeforeCommand: true,
         ignorePrefixCase: true,
-    }
-}
+    },
+};
 
 @singleton(TextParserService)
 export class TextParserService {
-    options: TextParserServiceOptions
+    options: TextParserServiceOptions;
 
     constructor(
         @optional()
@@ -34,9 +33,9 @@ export class TextParserService {
             ...options,
             parserOptions: {
                 ...defaults.parserOptions,
-                ...options?.parserOptions || {},
-            }
-        }
+                ...(options?.parserOptions || {}),
+            },
+        };
     }
 
     /**
@@ -47,7 +46,6 @@ export class TextParserService {
         const botname = `<@${msg.client.user.id}> `;
         msg.content = msg.content.replace(botname, this.options.prefix);
     }
-
 
     /**
      * Parse a Discord.js message into a TextCommandContext
@@ -63,7 +61,7 @@ export class TextParserService {
 
         if (!parsed.success) {
             return null;
-        };
+        }
 
         return new TextCommandContext(msg, parsed);
     }

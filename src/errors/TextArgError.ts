@@ -1,7 +1,6 @@
-
 /**
  * An error that occurs when a text command is called with invalid arguments.
- * 
+ *
  * The optional `showHelp` property determines whether the help message should be shown
  * to the user.
  */

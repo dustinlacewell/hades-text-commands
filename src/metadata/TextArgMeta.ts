@@ -1,7 +1,6 @@
 import { TextArgParser } from "../parsers";
 import { Constructor, InstallerFunc, Newable } from "hades";
 
-
 /**
  * Decorator metdata for command arguments.
  */

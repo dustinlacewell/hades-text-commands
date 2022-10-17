@@ -1,7 +1,6 @@
 import { command } from "../decorators";
 import { TextCommand } from "../models/TextCommand";
 
-
 @command("ping")
 export class PingCommand extends TextCommand {
     execute() {

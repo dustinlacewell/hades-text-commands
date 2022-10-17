@@ -1,11 +1,11 @@
-import { Container } from 'inversify';
+import { Container } from "inversify";
 
-import { TextArgError } from '../../errors';
-import { TextArgMeta } from '../../metadata';
-import { TextArgParser } from '../../parsers';
-import { Constructor, InstallerFunc, Newable } from 'hades';
-import { Validator } from '../../validators';
-import { TextCommandContext } from '../../models/TextCommandContext';
+import { TextArgError } from "../../errors";
+import { TextArgMeta } from "../../metadata";
+import { TextArgParser } from "../../parsers";
+import { Constructor, InstallerFunc, Newable } from "hades";
+import { Validator } from "../../validators";
+import { TextCommandContext } from "../../models/TextCommandContext";
 
 /**
  * Binds argument values in a container.
@@ -62,7 +62,7 @@ export class TextArgInstaller {
         await this.executeValidators(di, context, value);
 
         // finally bind the validated value in the subcontainer
-        di.bind(this.property).toConstantValue(value)
+        di.bind(this.property).toConstantValue(value);
     }
 
     private throwIfValueIsEmpty(value: any) {

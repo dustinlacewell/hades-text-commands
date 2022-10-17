@@ -1,10 +1,9 @@
-import { Collection } from 'discord.js';
-import { multiInject, postConstruct } from 'inversify';
+import { Collection } from "discord.js";
+import { multiInject, postConstruct } from "inversify";
 
-import { singleton } from 'hades';
+import { singleton } from "hades";
 
-import { TextCommandHelper } from './TextCommandHelper';
-
+import { TextCommandHelper } from "./TextCommandHelper";
 
 /**
  * A registry of available command helpers.
@@ -14,7 +13,7 @@ export class TextCommandHelperRegistry {
     map = new Collection<string, TextCommandHelper>();
 
     @multiInject(TextCommandHelper)
-    helpers: TextCommandHelper[]
+    helpers: TextCommandHelper[];
 
     @postConstruct()
     init() {
@@ -28,6 +27,6 @@ export class TextCommandHelperRegistry {
     }
 
     find(predicate: (helper: TextCommandHelper) => boolean) {
-        return this.helpers.find(predicate)
+        return this.helpers.find(predicate);
     }
 }

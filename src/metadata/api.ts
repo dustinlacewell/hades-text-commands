@@ -9,7 +9,6 @@ const PARSER_METADATA = Symbol("Hades:ParserMetadata");
 // key where @command metadata is stored
 const COMMAND_METADATA = Symbol("Hades:CommandMetadata");
 
-
 /**
  * Get all metas defined with @command
  * @returns A collection of TextCommandMetas
@@ -81,7 +80,6 @@ export function addTextArgValidator(target: Constructor, argName: string, instal
     const meta = getTextArgMeta(target, argName);
     meta.validatorInstallers.push(installer);
 }
-
 
 /**
  * Get all @parser metas.

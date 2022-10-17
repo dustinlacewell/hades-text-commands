@@ -1,9 +1,8 @@
-import { Collection } from 'discord.js';
-import { multiInject, postConstruct } from 'inversify';
+import { Collection } from "discord.js";
+import { multiInject, postConstruct } from "inversify";
 
-import { singleton } from 'hades';
-import { TextCommandFactory } from './TextCommandFactory';
-
+import { singleton } from "hades";
+import { TextCommandFactory } from "./TextCommandFactory";
 
 /**
  * A registry of available command factories.
@@ -13,7 +12,7 @@ export class TextCommandFactoryRegistry {
     map = new Collection<string, TextCommandFactory>();
 
     @multiInject(TextCommandFactory)
-    factories: TextCommandFactory[]
+    factories: TextCommandFactory[];
 
     @postConstruct()
     init() {
@@ -27,7 +26,7 @@ export class TextCommandFactoryRegistry {
     }
 
     find(predicate: (factory: TextCommandFactory) => boolean) {
-        return this.factories.find(predicate)
+        return this.factories.find(predicate);
     }
 
     all() {

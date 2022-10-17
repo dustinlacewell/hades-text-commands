@@ -1,17 +1,16 @@
-import { Collection } from 'discord.js';
-import { Container } from 'inversify';
+import { Collection } from "discord.js";
+import { Container } from "inversify";
 
-import { TextCommandMeta } from '../../metadata/TextCommandMeta';
+import { TextCommandMeta } from "../../metadata/TextCommandMeta";
 
-import { TextArgInstaller } from './TextArgInstaller';
-import { TextCommandContext } from '../../models/TextCommandContext';
-import { TextArgParserResolver } from './TextArgParserResolver';
-import { TextArgParserRegistry } from './TextArgParserRegistry';
-
+import { TextArgInstaller } from "./TextArgInstaller";
+import { TextCommandContext } from "../../models/TextCommandContext";
+import { TextArgParserResolver } from "./TextArgParserResolver";
+import { TextArgParserRegistry } from "./TextArgParserRegistry";
 
 /**
  * Instantiates commands on invocation.
- * 
+ *
  * Ever command class is associated with its own TextCommandFactory. On
  * invocation of that command, the factory will do what's necessary to
  * create an instance of that command class suitable for execution.
@@ -24,10 +23,7 @@ export class TextCommandFactory {
     /** arguments of the associated command */
     argInstallers = new Collection<string, TextArgInstaller>();
 
-    constructor(
-        parentContainer: Container,
-        meta: TextCommandMeta,
-    ) {
+    constructor(parentContainer: Container, meta: TextCommandMeta) {
         this.parentContainer = parentContainer;
         this.meta = meta;
         console.log("Constructed text command factory for", meta.name);
@@ -65,7 +61,7 @@ export class TextCommandFactory {
      * @returns A sub-container.
      */
     createSubContainer(context: TextCommandContext) {
-        const di = this.parentContainer.createChild({ skipBaseClassChecks: true })
+        const di = this.parentContainer.createChild({ skipBaseClassChecks: true });
         // bind the command class
         di.bind(this.meta.target).toSelf();
         // bind the invocation context
@@ -107,4 +103,3 @@ export class TextCommandFactory {
         return inst;
     }
 }
-

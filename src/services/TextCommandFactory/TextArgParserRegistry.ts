@@ -1,9 +1,8 @@
-import { Collection } from 'discord.js';
-import { multiInject, postConstruct } from 'inversify';
+import { Collection } from "discord.js";
+import { multiInject, postConstruct } from "inversify";
 
-import { singleton, Newable } from 'hades';
-import { TextArgParser } from '../../parsers/TextArgParser';
-
+import { singleton, Newable } from "hades";
+import { TextArgParser } from "../../parsers/TextArgParser";
 
 /**
  * A registry of decorated Parsers.
@@ -15,7 +14,7 @@ export class TextArgParserRegistry {
     map = new Collection<Newable<TextArgParser>, TextArgParser>();
 
     @multiInject(TextArgParser)
-    parsers: TextArgParser[]
+    parsers: TextArgParser[];
 
     @postConstruct()
     init() {
@@ -29,6 +28,6 @@ export class TextArgParserRegistry {
     }
 
     find(predicate: (meta: TextArgParser) => boolean) {
-        return this.parsers.find(predicate)
+        return this.parsers.find(predicate);
     }
 }

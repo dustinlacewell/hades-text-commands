@@ -1,10 +1,9 @@
-import { Container, injectable } from 'inversify';
+import { Container, injectable } from "inversify";
 
-import { TextArgInstaller } from '../services/TextCommandFactory/TextArgInstaller';
-import { addTextArgValidator } from '../metadata';
-import { Constructable } from 'hades';
-import { TextCommandContext } from '../models/TextCommandContext';
-
+import { TextArgInstaller } from "../services/TextCommandFactory/TextArgInstaller";
+import { addTextArgValidator } from "../metadata";
+import { Constructable } from "hades";
+import { TextCommandContext } from "../models/TextCommandContext";
 
 /**
  * Base class for reusable argument validators.
@@ -18,11 +17,8 @@ export class Validator {
     static check() {
         return ({ constructor }: Constructable, key: string) => {
             addTextArgValidator(constructor, key, (container: Container) => {
-                container
-                    .bind(Validator)
-                    .to(this)
-                    .whenTargetNamed(key);
+                container.bind(Validator).to(this).whenTargetNamed(key);
             });
-        }
+        };
     }
 }

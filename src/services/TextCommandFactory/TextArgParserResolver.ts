@@ -1,9 +1,9 @@
-import { Collection } from 'discord.js';
-import { multiInject, postConstruct } from 'inversify';
+import { Collection } from "discord.js";
+import { multiInject, postConstruct } from "inversify";
 
-import { singleton, Constructor, Newable } from 'hades';
-import { TextArgParser } from '../../parsers/TextArgParser';
-import { StringParser } from '../../parsers';
+import { singleton, Constructor, Newable } from "hades";
+import { TextArgParser } from "../../parsers/TextArgParser";
+import { StringParser } from "../../parsers";
 
 export type TypeMap = [Constructor, Newable<TextArgParser>];
 
@@ -12,29 +12,29 @@ export type TypeMap = [Constructor, Newable<TextArgParser>];
  */
 @singleton(TextArgParserResolver)
 export class TextArgParserResolver {
-  @multiInject('MappedTypes')
-  protected types: TypeMap[]
+    @multiInject("MappedTypes")
+    protected types: TypeMap[];
 
-  private map = new Collection<Constructor, Newable<TextArgParser>>();
+    private map = new Collection<Constructor, Newable<TextArgParser>>();
 
-  @postConstruct()
-  init() {
-    this.types.forEach(([from, to]) => this.map.set(from, to))
-  }
-
-  /**
-   * Get a parser type for a given argument type.
-   * @param fromType The argument type to look up.
-   * @returns
-   */
-  infer(fromType: Constructor) {
-    if (!fromType) {
-      return StringParser;
+    @postConstruct()
+    init() {
+        this.types.forEach(([from, to]) => this.map.set(from, to));
     }
-    for (let [ctor, type] of this.map) {
-      if (ctor.name === fromType.toString()) {
-        return type;
-      }
+
+    /**
+     * Get a parser type for a given argument type.
+     * @param fromType The argument type to look up.
+     * @returns
+     */
+    infer(fromType: Constructor) {
+        if (!fromType) {
+            return StringParser;
+        }
+        for (let [ctor, type] of this.map) {
+            if (ctor.name === fromType.toString()) {
+                return type;
+            }
+        }
     }
-  }
 }

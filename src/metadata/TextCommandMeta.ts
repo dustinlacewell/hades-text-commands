@@ -3,7 +3,6 @@ import { Collection } from "discord.js";
 import { Constructor } from "hades";
 import { TextArgMeta } from "./TextArgMeta";
 
-
 /**
  * Decorator metadata for @command
  */
@@ -14,7 +13,7 @@ export class TextCommandMeta {
     description?: string;
 
     getArgMeta(name: string) {
-        let meta = this.args.get(name)
+        let meta = this.args.get(name);
         if (meta === undefined) {
             meta = new TextArgMeta();
             this.args.set(name, meta);
