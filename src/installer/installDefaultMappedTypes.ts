@@ -1,4 +1,4 @@
-import { Channel, User, Role, GuildChannel, GuildMember } from "discord.js";
+import { BaseChannel, User, Role, GuildChannel, GuildMember } from "discord.js";
 import { Container } from "inversify";
 import { Constructable, Newable } from "hades";
 import { StringParser, IntegerParser, ChannelParser, UserParser, RoleParser, GuildChannelParser, MemberParser, TextArgParser } from "../parsers";
@@ -6,13 +6,13 @@ import { StringParser, IntegerParser, ChannelParser, UserParser, RoleParser, Gui
 export type TypePair = readonly [Constructable, Newable<TextArgParser>];
 
 export const defaultMappedTypes: TypePair[] = [
-    [String, StringParser],
-    [Number, IntegerParser],
-    [Channel, ChannelParser],
-    [User, UserParser],
-    [Role, RoleParser],
-    [GuildChannel, GuildChannelParser],
-    [GuildMember, MemberParser],
+  [String, StringParser],
+  [Number, IntegerParser],
+  [BaseChannel, ChannelParser],
+  [User, UserParser],
+  [Role, RoleParser],
+  [GuildChannel, GuildChannelParser],
+  [GuildMember, MemberParser],
 ]
 
 /**
@@ -21,9 +21,9 @@ export const defaultMappedTypes: TypePair[] = [
  * @param mappedTypes Type mappings.
  */
 export const installDefaultMappedTypes = (container: Container, mappedTypes: TypePair[]) => {
-    mappedTypes.forEach(
-        pair => {
-            container.bind('MappedTypes').toConstantValue(pair)
-        }
-    );
+  mappedTypes.forEach(
+    pair => {
+      container.bind('MappedTypes').toConstantValue(pair)
+    }
+  );
 }
